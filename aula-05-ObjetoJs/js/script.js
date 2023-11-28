@@ -7,7 +7,6 @@ var clienteSaldo = 0;*/
 
 /* var Cliente1 = ["clienteNome = "Leonardo","ClienteSaldo = 0"];
 /* var cliente2 = ["clienteNome = "Alice","ClienteSaldo = 0"]; */
-
 class Cliente{
     nome;
     cpf;
