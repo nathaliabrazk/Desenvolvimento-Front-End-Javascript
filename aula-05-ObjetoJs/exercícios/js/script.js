@@ -22,11 +22,32 @@ let carro = {
       if (this.velocidadeAtual + velocidade <= this.velocidadeMaxima) {
         this.velocidadeAtual += velocidade;
         console.log(`Acelerando. Velocidade Atual: ${this.velocidadeAtual} km/h`);
-      } else {
+      }else {
         console.log(`Velocidade máxima atingida (${this.velocidadeMaxima} km/h). Não é possível acelerar mais.`);
+      }if(this.velocidadeAtual < 0){
+        console.log("Velocidade inválida! Digite valores acima de 0");
       }
     }
   };
   console.log("Detalhes do carro:", carro);
   //utilizando o método
   carro.acelerar(50); 
+
+  //HTML
+  var btnCarro = document.getElementById("btnCarro");
+  var resultado = document.getElementById("resultado");
+  btnCarro.addEventListener('click', criarCarro);
+
+  function criarCarro(){
+      let marcaInput = document.querySelector("#marca").value;
+      let modeloInput = document.querySelector("#modelo").value;
+      let anoInput = document.querySelector("#ano").value;
+      let corInput = document.querySelector("#cor").value;
+      let velocidadeMaxInput = document.querySelector("#velocidadeMax").value;
+
+      var carro = new carro(marcaInput, modeloInput, anoInput, corInput, velocidadeMaxInput);
+
+      resultado.innerHTML = `<div class="carroResultado">
+      <h3>${carro.modelo}</h3>
+      </div>`;
+  }
