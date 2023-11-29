@@ -1,6 +1,6 @@
 /*faça uma página de cadastramento de filmes onde o usuario possa salvar um filme 
-e suas informações como nome, descrição,data, diretor e categoria e liste ela de a
-lguma forma em algum elemento HTML!*/
+e suas informações como nome, descrição,data, diretor e categoria e liste ela de 
+alguma forma em algum elemento HTML*/
 
 //CLASSE
 class Filme {
@@ -13,6 +13,13 @@ class Filme {
        }
 }
 
+var btnCadastro = document.getElementById("btnCadastro");
+var btnListar = document.getElementById("Listar");
+
+btnCadastro.addEventListener('click', cadastramento);
+btnListar.addEventListener('click', listar);
+var filme = null;
+ 
 //FUNÇÃO
 function cadastramento(){
     let tituloInput = document.querySelector("#titulo").value;
@@ -21,10 +28,15 @@ function cadastramento(){
     let lancamentoInput = document.querySelector("#lancamento").value;
     let categoriaInput = document.querySelector("#categoria").value;
 
-    var filme = new Filme
-    resultado.innerHTML = `<div class="carroResultado">
-    <h3>${carro.modelo}</h3>
-    <p>${carro.marca}</p>
-    <span style="color : ${carro.cor};">COR ESCOLHIDA</span>
-    </div>`;
+    filme = new Filme(tituloInput, descricaoInput, diretorInput, lancamentoInput, categoriaInput);
+}
+function listar(){
+    let resposta = document.querySelector("#resposta");
+    resposta.innerHTML += `<div class="filme">
+        <h2>${filme.titulo}</h2>
+        <p>Descrição do filme: ${filme.descricao}</p>
+        <p>Data de lançamento: ${filme.lancamento}</p>
+        <p>Diretor : ${filme.diretor}</p>
+        <p style="color: blue;">${filme.categoria}</p>
+    </div>`
 }

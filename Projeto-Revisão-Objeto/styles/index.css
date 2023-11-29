@@ -30,6 +30,18 @@ input{
     width: 300px;
     height: 50px;
     font-size: 20px;
+    border-radius: 10px;
+    color: grey;
+}
+
+input::placeholder{
+    color: grey;
+}
+
+label{
+    color: #f9fbfe;
+    font-size: 20px;
+    background-color: #354f7086;
 }
 
 h1{
@@ -62,4 +74,11 @@ button:hover{
     background-color: #355070;
     transition: 0.3s;
     color: aliceblue;
+}
+
+button:active{
+
+}
+button:focus{
+    
 }

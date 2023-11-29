@@ -19,7 +19,6 @@ class Carro {
   }
 }
 
-
 // HTML
 var btnCarro = document.getElementById("btnCarro");
 var resultado = document.getElementById("resultado");
