@@ -34,6 +34,7 @@ input{
 
 h1{
     color: azure;
+    margin-bottom: 35px;
 }
 
 #questionario{
@@ -52,7 +53,13 @@ button{
     border: none;
     margin: 10px;
     font-size: 15px;
-    color: aliceblue;
+    color: #ffff;
     background-color: #455e89;
     border-radius: 10px;
+}
+
+button:hover{
+    background-color: #355070;
+    transition: 0.3s;
+    color: aliceblue;
 }
