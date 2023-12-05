@@ -5,16 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery</title>
+    <style>
+        .temaClaro{
+            background-color: rgb(230, 196, 227);
+            color: rgba(0, 0, 0, 0.746);
+            transition: 1s;
+        }
+        .temaEscuro{
+            background-color: rgba(22, 8, 73, 0.746);
+            color: rgb(255, 255, 255);
+            transition: 1s;
+        }
+    </style>
 </head>
-<body>
+<body class="#temaClaro">
     <hr>
     <h1>ATIVIDADE 1 - TABUADA</h1>
     <input type="number" id="numeroEscolhido">
     <button type="button" id="btnTabuada">CALCULAR</button>
     <div id="resultadoTabuada"></div>
 
+    <hr>
+    <h1>ATIVIDADE 02 - TEMA</h1>
+    <button type="button" class="temaClaro" id="btnTema">TROCAR TEMA: ATUAL LIGHT</button>
+
     <script src="../materialAula/js/jquery-3.7.1.js"></script>
-    <script src="../exercicios/js/script01.js"></script>
+    <script src="../exercicios/js/script02.js"></script>
     <script src="../materialAula/js/script.js"></script>
     
 </body>
